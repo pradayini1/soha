@@ -187,3 +187,9 @@ do
 echo "Filesystem ${filesys[i]} have less than 10% free space"
 fi
 done
+
+
+-----------------------
+
+
+for f in * ; do mv -- "$f" "PRE_$f" ; done

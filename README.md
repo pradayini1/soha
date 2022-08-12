@@ -200,3 +200,6 @@ $ cat sample2.txt | head -7 | tail -5
 
 getent passwd | awk -F':' '{ print length($1), $1 }' | sort -rn | head -n 1
 11 _traceroute
+
+
+grep -v "^#" /etc/passwd | awk -F: '{print length($1), $1}' | sort -nr | head -1 | cut -d\  -f2

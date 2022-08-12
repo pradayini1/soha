@@ -195,3 +195,8 @@ done
 for f in * ; do mv -- "$f" "PRE_$f" ; done
 
 $ cat sample2.txt | head -7 | tail -5
+
+
+
+getent passwd | awk -F':' '{ print length($1), $1 }' | sort -rn | head -n 1
+11 _traceroute
